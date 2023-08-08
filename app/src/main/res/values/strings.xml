@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">AndroidMaster</string>
+    <!-- IMC -->
     <string name="male">Hombre</string>
     <string name="female">Mujer</string>
     <string name="altura">Altura</string>
@@ -21,7 +22,9 @@
 
     <string name="title_obesidad">Obesidad</string>
     <string name="description_obesidad">Estás muy por encima de lo óptimo para tu peso y altura</string>
+    <!--IMC-->
 
-
-
+    <!-- TodoApp -->
+    <string name="todo_title">Bienvenido</string>
+    <string name="todo_category">Categoría</string>
 </resources>
