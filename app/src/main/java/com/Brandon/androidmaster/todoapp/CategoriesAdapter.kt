@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.Brandon.androidmaster.R
 
-class CategoriesAdapter(private val categories: List<TaskCategory>) :
+class CategoriesAdapter(private val categories: List<TaskCategory>, private val onItemSelected:(Int)->Unit) :
     RecyclerView.Adapter<CategoriesViewHolder>() {
     //crear una vista visual, y montar esa vista para que el método onBindViewHolder pueda pasarle la información que debe de pintar
 
@@ -20,7 +20,8 @@ class CategoriesAdapter(private val categories: List<TaskCategory>) :
     }
 
     override fun onBindViewHolder(holder: CategoriesViewHolder, position: Int) {
-        holder.render(categories[position])
+        //estoy mandando la función lambda, sin los parentesis lo estoy mandando, si tuviera los parentesis lo estaria ejecutando
+        holder.render(categories[position], onItemSelected)
     }
 
 }
