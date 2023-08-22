@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.Brandon.androidmaster.firstapp.FirstAppActivity
 import com.Brandon.androidmaster.imccalculator.ImcCalculatorActivity
+import com.Brandon.androidmaster.settings.SettingsActivity
 import com.Brandon.androidmaster.superheroapp.SuperHeroListActivity
 import com.Brandon.androidmaster.todoapp.TodoActivity
 
@@ -16,7 +17,6 @@ class MenuActivity : AppCompatActivity() {
         val btnSaludarApp = findViewById<Button>(R.id.btnSaludarApp)
         val btnIMCApp = findViewById<Button>(R.id.btnIMCApp)
         val btnTODO = findViewById<Button>(R.id.btnTODO)
-
         //recycler view, consumo de apis
         val btnSuperHeroApp = findViewById<Button>(R.id.btnSuperHeroApp)
 
@@ -24,15 +24,21 @@ class MenuActivity : AppCompatActivity() {
         btnIMCApp.setOnClickListener { navigateToIMCApp() }
         btnTODO.setOnClickListener { navigateToTodoApp() }
         btnSuperHeroApp.setOnClickListener { navigateToSuperHeroApp() }
+
+    }
+
+    private fun navigateToSettingsApp() {
+        val intent = Intent(this, SettingsActivity::class.java)
+        startActivity(intent)
     }
 
     private fun navigateToSuperHeroApp() {
-        val intent =Intent(this, SuperHeroListActivity::class.java)
+        val intent = Intent(this, SuperHeroListActivity::class.java)
         startActivity(intent)
     }
 
     private fun navigateToTodoApp() {
-        val intent=Intent(this, TodoActivity::class.java)
+        val intent = Intent(this, TodoActivity::class.java)
         startActivity(intent)
     }
 
